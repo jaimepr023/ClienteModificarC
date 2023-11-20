@@ -49,17 +49,17 @@ namespace AltaCuentaC.Dtos
         {
 
         }
-
+        override
         public string ToString()
         {
             string todoCliente =
-                "Nombre--> " + nombreCliente
-                + "Apellidos--> " + apellidosClientes
-                + "DNI--> " + DNI
-                + "Telefono--> " + TLF
-                + "Fecha de Nacimiento--> " + fechaNacimiento
-                + "Fecha de Alta--> " + fechaAlta
-                 + "Fecha de Baja--> " + fechaBaja;
+                "Nombre--> " + nombreCliente + "\n"
+                + "Apellidos--> " + apellidosClientes + "\n"
+                + "DNI--> " + DNI + "\n"
+                + "Telefono--> " + TLF + "\n"
+                + "Fecha de Nacimiento--> " + fechaNacimiento + "\n"
+                + "Fecha de Alta--> " + fechaAlta + "\n"
+                 + "Fecha de Baja--> " + fechaBaja + "\n";
 
             return todoCliente;
         }

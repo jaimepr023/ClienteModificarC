@@ -20,7 +20,7 @@ namespace AltaCuentaC.Servicios
             cliente.NombreCliente = Console.ReadLine();
             Console.WriteLine("Dame tus apellidos: ");
             cliente.ApellidosClientes = Console.ReadLine();
-            Console.WriteLine("Da,e tu DNI");
+            Console.WriteLine("Dame tu DNI");
             cliente.DNI1 = Console.ReadLine();
             Console.WriteLine("Dame tu numero de telefono: ");
             cliente.TLF1 = Int32.Parse(Console.ReadLine());

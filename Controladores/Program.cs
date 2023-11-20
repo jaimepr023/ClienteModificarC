@@ -32,7 +32,7 @@ namespace AltaCuentaC.Controladores
                         ci.DarAltaCliente(cliente);
                         foreach(ClienteDto clienteDto in cliente)
                         {
-                            Console.WriteLine(cliente.ToString());
+                            Console.WriteLine(clienteDto.ToString());
                         }
                         break;
                     case 2:
