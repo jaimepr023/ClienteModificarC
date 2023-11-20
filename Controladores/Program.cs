@@ -14,6 +14,7 @@ namespace AltaCuentaC.Controladores
             List<CuentaDto> cuenta = new List<CuentaDto>();
             MenuInterfaz mi = new MenuImplementacion();
             ClienteInterfaz ci = new ClienteImplementacion();
+            CuentaInterfaz cci = new CuentaImplementacion();
             mi.mensajeBienvenida();
 
             bool cerrarMenu = false;
@@ -36,6 +37,11 @@ namespace AltaCuentaC.Controladores
                         }
                         break;
                     case 2:
+                        cci.altaCuenta(cuenta);
+                        foreach(CuentaDto cuentaDto in cuenta)
+                        {
+                            Console.WriteLine(cuentaDto.ToString());
+                        }
                         break;
                     default:
                         Console.WriteLine("[INFOS]- Error no ha elegido ninguna de las opciones");
