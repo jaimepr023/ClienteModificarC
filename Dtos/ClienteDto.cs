@@ -59,7 +59,7 @@ namespace AltaCuentaC.Dtos
             string todoCliente =
                 "Nombre--> " + nombreCliente + "\n"
                 + "Apellidos--> " + apellidosClientes + "\n"
-                + "DNI--> " + DNI + "\n"
+                + "DNI/NIE--> " + DNI + "\n"
                 + "Telefono--> " + TLF + "\n"
                 + "Fecha de Nacimiento--> " + fechaNacimiento + "\n"
                 + "Fecha de Alta--> " + fechaAlta + "\n"
