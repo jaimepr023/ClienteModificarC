@@ -24,7 +24,7 @@ namespace AltaCuentaC.Servicios
             Console.WriteLine("............................");
             Console.WriteLine("Opcion 0. Cerrar menu.");
             Console.WriteLine("Opcion 1. Dar de alta un cliente.");
-            Console.WriteLine("Opcion 2. Modoificar cliente");
+            Console.WriteLine("Opcion 2. Modificar cliente");
             Console.WriteLine("Opcion 3. Dar de alta una cuenta bancaria.");
             Console.WriteLine("............................");
 
