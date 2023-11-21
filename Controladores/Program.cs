@@ -46,9 +46,6 @@ namespace AltaCuentaC.Controladores
                         }
                         break;
                     case 2:
-
-                        break;
-                    case 3:
                         cci.altaCuenta(cuenta);
                         foreach(CuentaDto cuentaDto in cuenta)
                         {
