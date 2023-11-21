@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AltaCuentaC.Dtos
 {
+    /// <summary>
+    /// Clase donde se encuentra los atributos/caracteristicas en relacion con el cliente
+    /// <author>jpr-211123</author>
+    /// </summary>
     internal class ClienteDto
     {
         long idCliente;
@@ -24,6 +28,7 @@ namespace AltaCuentaC.Dtos
 
         string fechaBaja = "12/31/9999";
 
+       
         public long IdCliente { get => idCliente; set => idCliente = value; }
         public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
         public string ApellidosClientes { get => apellidosClientes; set => apellidosClientes = value; }
@@ -33,22 +38,21 @@ namespace AltaCuentaC.Dtos
         public string FechaAlta { get => fechaAlta; set => fechaAlta = value; }
         public string FechaBaja { get => fechaBaja; set => fechaBaja = value; }
 
-        public ClienteDto(long idCliente, string nombreCliente, string apellidosClientes, string dNI, int tLF, string fechaNacimiento, string fechaAlta, string fechaBaja)
-        {
-            this.idCliente = idCliente;
-            this.nombreCliente = nombreCliente;
-            this.apellidosClientes = apellidosClientes;
-            DNI = dNI;
-            TLF = tLF;
-            this.fechaNacimiento = fechaNacimiento;
-            this.fechaAlta = fechaAlta;
-            this.fechaBaja = fechaBaja;
-        }
 
+        /// <summary>
+        /// Constructores de los atributos del cliente 
+        /// <author>jpr-211123</author>
+        /// </summary>
         public ClienteDto()
         {
 
         }
+
+        /// <summary>
+        /// Metodo ToString para poder imprimir despues la lista y sus valores
+        /// <author>jpr-211123</author>
+        /// </summary>
+        /// <returns>las caracteristicas del cliente </returns>
         override
         public string ToString()
         {

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AltaCuentaC.Dtos
 {
+    /// <summary>
+    /// Clase donde se encuentra las caracteristicas/atributos de nuestra cuenta 
+    /// <author>jpr-211123</author>
+    /// </summary>
     internal class CuentaDto
     {
         long idCuenta;
@@ -20,6 +24,7 @@ namespace AltaCuentaC.Dtos
 
         string DNICliente;
 
+       
         public long IdCuenta { get => idCuenta; set => idCuenta = value; }
         public string Isban { get => isban; set => isban = value; }
         public string CódigoSwitch { get => códigoSwitch; set => códigoSwitch = value; }
@@ -27,12 +32,20 @@ namespace AltaCuentaC.Dtos
         public string FechaBajaCuenta { get => fechaBajaCuenta; set => fechaBajaCuenta = value; }
         public string DNICliente1 { get => DNICliente; set => DNICliente = value; }
 
+        /// <summary>
+        /// Constructores de los atributos del cliente 
+        /// <author>jpr-211123</author>
+        /// </summary>
         public CuentaDto()
         {
 
         }
 
-
+        /// <summary>
+        /// Metodo ToString para poder imprimir despues la lista y sus valores
+        /// <author>jpr-211123</author>
+        /// </summary>
+        /// <returns>las caracteristicas de la cuenta </returns>
         override
         public string ToString()
         {
@@ -42,7 +55,7 @@ namespace AltaCuentaC.Dtos
                 + "código Switch--> " + códigoSwitch + "\n"
                 + "fecha de alta--> " + fechaAltaCuenta + "\n"
                 + "fecha de baja--> " + fechaBajaCuenta + "\n"
-                + "DNI Cliente--> " + DNICliente + "\n";
+                + "DNI/NIE Cliente--> " + DNICliente + "\n";
             return todoCuenta;
         }
     }

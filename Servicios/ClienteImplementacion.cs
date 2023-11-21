@@ -7,10 +7,18 @@ using System.Threading.Tasks;
 
 namespace AltaCuentaC.Servicios
 {
+    /// <summary>
+    /// Implementacion que implementa la interfaz de cliente
+    /// <author>jpr-211123</author>
+    /// </summary>
     internal class ClienteImplementacion : ClienteInterfaz
     {
-        public object Int34 { get; private set; }
 
+        /// <summary>
+        /// metodo privado para crear un cliente 
+        /// <author>jpr-211123</author>
+        /// </summary>
+        /// <returns>cliente</returns>
         private ClienteDto crearCliente()
         {
             ClienteDto cliente = new ClienteDto();

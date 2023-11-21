@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AltaCuentaC.Servicios
 {
+    /// <summary>
+    /// Implementacion que implementa la interfaz del menu
+    /// <author>jpr-211123</author>
+    /// </summary>
     internal class MenuImplementacion : MenuInterfaz
     {
         public void mensajeBienvenida()

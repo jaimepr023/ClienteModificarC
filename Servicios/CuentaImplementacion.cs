@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace AltaCuentaC.Servicios
 {
+    /// <summary>
+    /// clase donde se encuentra toda la logica relacionada con la cuenta 
+    /// <author>jpr-211123</author>
+    /// </summary>
     internal class CuentaImplementacion : CuentaInterfaz
     {
+        /// <summary>
+        /// metodo privado que crea una cuenta nueva 
+        /// <author>jpr-211123</author>
+        /// </summary>
+        /// <returns>Devuelve una cuentaDTO</returns>
         private CuentaDto crearCuenta()
         {
             CuentaDto cuentaAntigua = new CuentaDto();
@@ -18,7 +27,7 @@ namespace AltaCuentaC.Servicios
             cuentaAntigua.Isban = Console.ReadLine();
             Console.WriteLine("Dame la fecha de alta de la cuenta bancaria:");
             cuentaAntigua.FechaAltaCuenta = Console.ReadLine();
-            Console.WriteLine("Dame su DNI para identificarse con la cuenta:");
+            Console.WriteLine("Dame su DNI/NIE para identificarse con la cuenta:");
             cuentaAntigua.DNICliente1 = Console.ReadLine();
             Console.WriteLine("\n");
             return cuentaAntigua;

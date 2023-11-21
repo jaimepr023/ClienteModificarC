@@ -6,9 +6,18 @@ using AltaCuentaC.Servicios;
 
 namespace AltaCuentaC.Controladores
 {
+    /// <summary>
+    /// Clase inicial de nuestra app donde esta el metodo main
+    /// <author>jpr-211123</author>
+    /// </summary>
     class program
     {
-       static public void Main(String[] args)
+        /// <summary>
+        /// Metodo main donde se encuentra todo el procedimiento de nuestra app
+        /// <author>jpr-211123</author>
+        /// </summary>
+        /// <param name="args"></param>
+        static public void Main(String[] args)
         {
             List<ClienteDto> cliente = new List<ClienteDto>();
             List<CuentaDto> cuenta = new List<CuentaDto>();
