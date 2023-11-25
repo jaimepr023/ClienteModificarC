@@ -45,5 +45,17 @@ namespace AltaCuentaC.Servicios
             ClienteDto nuevoCliente = crearCliente();
             ListaAntigua.Add(nuevoCliente);
         }
+
+       
+        public void modificarCliente()
+        {
+            
+            
+        }
+        
+            
+        
+
+   
     }
 }

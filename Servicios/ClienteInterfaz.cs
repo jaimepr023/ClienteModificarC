@@ -19,5 +19,8 @@ namespace AltaCuentaC.Servicios
         /// </summary>
         /// <param name="ListaAntigua"></param>
         public void DarAltaCliente(List<ClienteDto> ListaAntigua);
+
+
+        public void modificarCliente();
     }
 }

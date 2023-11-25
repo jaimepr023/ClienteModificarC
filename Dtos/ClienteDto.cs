@@ -57,6 +57,7 @@ namespace AltaCuentaC.Dtos
         public string ToString()
         {
             string todoCliente =
+                "ID-->" + idCliente +"\n"+
                 "Nombre--> " + nombreCliente + "\n"
                 + "Apellidos--> " + apellidosClientes + "\n"
                 + "DNI/NIE--> " + DNI + "\n"
