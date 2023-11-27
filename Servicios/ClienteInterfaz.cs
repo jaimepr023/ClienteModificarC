@@ -21,6 +21,6 @@ namespace AltaCuentaC.Servicios
         public void DarAltaCliente(List<ClienteDto> ListaAntigua);
 
 
-        public void modificarCliente();
+        public void modificarCliente(List<ClienteDto> ListaModCliente);
     }
 }

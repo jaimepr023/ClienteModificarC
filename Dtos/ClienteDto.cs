@@ -14,17 +14,17 @@ namespace AltaCuentaC.Dtos
     {
         long idCliente;
 
-        string nombreCliente;
+        string nombreCliente = "aaaaa";
 
-        string apellidosClientes;
+        string apellidosClientes = "aaaaa";
 
-        string DNI;
+        string DNI = "aaaaa";
 
-        int TLF;
+        int TLF ;
 
-        string fechaNacimiento;
+        string fechaNacimiento = "aaaaa";
 
-        string fechaAlta;
+        string fechaAlta = "aaaaa";
 
         string fechaBaja = "12/31/9999";
 
@@ -39,20 +39,13 @@ namespace AltaCuentaC.Dtos
         public string FechaBaja { get => fechaBaja; set => fechaBaja = value; }
 
 
-        /// <summary>
-        /// Constructores de los atributos del cliente 
-        /// <author>jpr-211123</author>
-        /// </summary>
+       
         public ClienteDto()
         {
 
         }
 
-        /// <summary>
-        /// Metodo ToString para poder imprimir despues la lista y sus valores
-        /// <author>jpr-211123</author>
-        /// </summary>
-        /// <returns>las caracteristicas del cliente </returns>
+      
         override
         public string ToString()
         {

@@ -47,10 +47,62 @@ namespace AltaCuentaC.Servicios
         }
 
        
-        public void modificarCliente()
+        public void modificarCliente(List<ClienteDto> ListaModCliente)
         {
-            
-            
+            string DNISEGURE = Console.ReadLine();
+            foreach (ClienteDto clientedto in ListaModCliente)
+            {
+                if (DNISEGURE.Equals(clientedto.DNI1))
+                {
+
+                    Console.WriteLine("¿Quieres modificar tu nombre? ");
+                    string afirmacion = Console.ReadLine();
+                    if (afirmacion == "si")
+                    {
+                        Console.WriteLine("Dame tu nombre: ");
+                        clientedto.NombreCliente = Console.ReadLine();
+                    }
+
+                    Console.WriteLine("¿Quieres modificar tu apellido? ");
+                    string afirmacion1 = Console.ReadLine();
+                    if (afirmacion1 == "si")
+                    {
+                        Console.WriteLine("Dame tu apellido: ");
+                        clientedto.ApellidosClientes = Console.ReadLine();
+                    }
+
+                    Console.WriteLine("¿Quieres modificar tu telefono? ");
+                    string afirmacion2 = Console.ReadLine();
+                    if (afirmacion2 == "si")
+                    {
+                        Console.WriteLine("Dame tu telefono: ");
+                        clientedto.TLF1 = Int32.Parse(Console.ReadLine());
+
+                    }
+
+                    Console.WriteLine("¿Quieres modificar tu fecha de nacimiento? ");
+                    string afirmacion3 = Console.ReadLine();
+                    if (afirmacion3 == "si")
+                    {
+                        Console.WriteLine("Dame tu fecha de nacimiento: ");
+                        clientedto.FechaNacimiento = Console.ReadLine();
+                    }
+
+                    Console.WriteLine("¿Quieres modificar tu fecha de alta? ");
+                    string afirmacion4 = Console.ReadLine();
+                    if (afirmacion4 == "si")
+                    {
+                        Console.WriteLine("Dame tu fecha de alta: ");
+                        clientedto.FechaAlta = Console.ReadLine();
+                    }
+
+
+
+                }
+                Console.WriteLine(clientedto.ToString());
+
+            }
+
         }
         
             

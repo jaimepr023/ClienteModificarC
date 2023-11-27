@@ -12,17 +12,17 @@ namespace AltaCuentaC.Dtos
     /// </summary>
     internal class CuentaDto
     {
-        long idCuenta;
+        long idCuenta ;
 
-        string isban;
+        string isban = "aaaaa";
 
         string códigoSwitch = " CSI1SSXX";
 
-        string fechaAltaCuenta;
+        string fechaAltaCuenta = "aaaaa";
 
         string fechaBajaCuenta = "12/31/9999";
 
-        string DNICliente;
+        string DNICliente = "aaaaa";
 
        
         public long IdCuenta { get => idCuenta; set => idCuenta = value; }
@@ -32,20 +32,13 @@ namespace AltaCuentaC.Dtos
         public string FechaBajaCuenta { get => fechaBajaCuenta; set => fechaBajaCuenta = value; }
         public string DNICliente1 { get => DNICliente; set => DNICliente = value; }
 
-        /// <summary>
-        /// Constructores de los atributos del cliente 
-        /// <author>jpr-211123</author>
-        /// </summary>
+       
         public CuentaDto()
         {
 
         }
 
-        /// <summary>
-        /// Metodo ToString para poder imprimir despues la lista y sus valores
-        /// <author>jpr-211123</author>
-        /// </summary>
-        /// <returns>las caracteristicas de la cuenta </returns>
+       
         override
         public string ToString()
         {
