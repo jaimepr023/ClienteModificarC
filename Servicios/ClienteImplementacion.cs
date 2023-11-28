@@ -108,14 +108,17 @@ namespace AltaCuentaC.Servicios
             
         public void borrarCliente(List<ClienteDto> ListaPaBorrar)
         {
+            ClienteDto borrarCliente = new ClienteDto();
             string Dni = Console.ReadLine();    
 
             foreach(ClienteDto cliente in ListaPaBorrar)
             {
                 if (cliente.DNI1.Equals(Dni))
                 {
-                    ListaPaBorrar.Remove(cliente);
+                    borrarCliente = cliente;
+
                 }
+                ListaPaBorrar.Remove(borrarCliente); 
             }
         }
 
