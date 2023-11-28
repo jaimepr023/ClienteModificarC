@@ -60,6 +60,15 @@ namespace AltaCuentaC.Controladores
                             Console.WriteLine(cuentaDto.ToString());
                         }
                         break;
+                    case 4:
+                        foreach(ClienteDto clienteDto in ListaCliente)
+                        {
+                            Console.WriteLine(clienteDto.ToString());
+                        }
+                        break;
+                        case 5:
+                        ci.borrarCliente(ListaCliente);
+                        break;
                     default:
                         Console.WriteLine("[INFOS]- Error nos ha elegido ninguna de las opciones");
                         break;

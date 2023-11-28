@@ -22,5 +22,7 @@ namespace AltaCuentaC.Servicios
 
 
         public void modificarCliente(List<ClienteDto> ListaModCliente);
+
+        public void borrarCliente(List<ClienteDto> ListaPaBorrar);
     }
 }
