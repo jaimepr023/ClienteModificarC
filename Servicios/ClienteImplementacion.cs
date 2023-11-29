@@ -57,6 +57,7 @@ namespace AltaCuentaC.Servicios
                 {
                     while (!cerrarMenuModificar)
                     {
+                        //el switch se puede poner en un metodo aparte (void) con parametros(ClienteDto, opcion del menu)
                         int opcion = menuModificar();
                         switch (opcion)
                         {
