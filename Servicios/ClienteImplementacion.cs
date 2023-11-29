@@ -49,55 +49,42 @@ namespace AltaCuentaC.Servicios
        
         public void modificarCliente(List<ClienteDto> ListaModCliente)
         {
+            bool cerrarMenuModificar = false;
             string DNISEGURE = Console.ReadLine();
             foreach (ClienteDto clientedto in ListaModCliente)
             {
                 if (DNISEGURE.Equals(clientedto.DNI1))
                 {
-
-                    Console.WriteLine("¿Quieres modificar tu nombre? ");
-                    string afirmacion = Console.ReadLine();
-                    if (afirmacion == "si")
+                    while (!cerrarMenuModificar)
                     {
-                        Console.WriteLine("Dame tu nombre: ");
-                        clientedto.NombreCliente = Console.ReadLine();
+                        int opcion = menuModificar();
+                        switch (opcion)
+                        {
+                            case 0:
+                                cerrarMenuModificar=true;
+                                break;
+                            case 1:
+                                Console.WriteLine("Dame tu nombre: ");
+                                clientedto.NombreCliente = Console.ReadLine();
+                                break;
+                            case 2:
+                                Console.WriteLine("Dame tu apellido: ");
+                                clientedto.ApellidosClientes = Console.ReadLine();
+                                break;
+                            case 3:
+                                Console.WriteLine("Dame tu telefono: ");
+                                clientedto.TLF1 = Int32.Parse(Console.ReadLine());
+                                break;
+                            case 4:
+                                Console.WriteLine("Dame tu fecha de nacimiento: ");
+                                clientedto.FechaNacimiento = Console.ReadLine();
+                                break;
+                            default:
+                                Console.WriteLine("[INFOS]-Error, no has elegido ninguna opcion");
+                                break;
+
+                        }
                     }
-
-                    Console.WriteLine("¿Quieres modificar tu apellido? ");
-                    string afirmacion1 = Console.ReadLine();
-                    if (afirmacion1 == "si")
-                    {
-                        Console.WriteLine("Dame tu apellido: ");
-                        clientedto.ApellidosClientes = Console.ReadLine();
-                    }
-
-                    Console.WriteLine("¿Quieres modificar tu telefono? ");
-                    string afirmacion2 = Console.ReadLine();
-                    if (afirmacion2 == "si")
-                    {
-                        Console.WriteLine("Dame tu telefono: ");
-                        clientedto.TLF1 = Int32.Parse(Console.ReadLine());
-
-                    }
-
-                    Console.WriteLine("¿Quieres modificar tu fecha de nacimiento? ");
-                    string afirmacion3 = Console.ReadLine();
-                    if (afirmacion3 == "si")
-                    {
-                        Console.WriteLine("Dame tu fecha de nacimiento: ");
-                        clientedto.FechaNacimiento = Console.ReadLine();
-                    }
-
-                    Console.WriteLine("¿Quieres modificar tu fecha de alta? ");
-                    string afirmacion4 = Console.ReadLine();
-                    if (afirmacion4 == "si")
-                    {
-                        Console.WriteLine("Dame tu fecha de alta: ");
-                        clientedto.FechaAlta = Console.ReadLine();
-                    }
-
-
-
                 }
                 Console.WriteLine(clientedto.ToString());
 
@@ -105,6 +92,23 @@ namespace AltaCuentaC.Servicios
 
         }
         
+        /// <summary>
+        /// Metodo privado para mostra en el menu que nos da la opcion de que campos podemos modificar 
+        /// <author> jpr-29-11-2023</author>
+        /// </summary>
+        /// <returns>opcion que elegimos del menu</returns>
+        private int menuModificar()
+        {
+            int opcion;
+            Console.WriteLine("Opcion 0. Cerrar Menu.");
+            Console.WriteLine("Opcion 1. Modificar Nombre.");
+            Console.WriteLine("Opcion 2. Modificar Apellidos.");
+            Console.WriteLine("Opcion 3. Modificar telefono.");
+            Console.WriteLine("Opcion 4. Modificar Fecha de nacimiento.");
+            Console.WriteLine("¿Que opcion quieres? ");
+            opcion =Console.ReadKey(true).KeyChar-'0';
+            return opcion;
+        }
             
         public void borrarCliente(List<ClienteDto> ListaPaBorrar)
         {
@@ -116,10 +120,11 @@ namespace AltaCuentaC.Servicios
                 if (cliente.DNI1.Equals(Dni))
                 {
                     borrarCliente = cliente;
+                    break;
 
                 }
-                ListaPaBorrar.Remove(borrarCliente); 
             }
+            ListaPaBorrar.Remove(borrarCliente);
         }
 
    
